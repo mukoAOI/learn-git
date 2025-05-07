@@ -1,9 +1,9 @@
 # learn-git
 为了完成git的作业
 
-## 基本工作流程
 
-#### Git 工作目录（Working Directory）、暂存区(Stage/Index)、资源库(Repository或Git Directory)、git仓库(Remote Directory)
+
+## Git 工作目录（Working Directory）、暂存区(Stage/Index)、资源库(Repository或Git Directory)、git仓库(Remote Directory)
 
 ![img](./assets/1352126739_7909.jpg)
 
@@ -14,8 +14,6 @@
 - 当执行提交操作（git commit）时，暂存区的目录树写到版本库（对象库）中，master 分支会做相应的更新。即 master 指向的目录树就是提交时暂存区的目录树。
 - 当执行 **git reset HEAD** 命令时，暂存区的目录树会被重写，被 master 分支指向的目录树所替换，但是工作区不受影响。
 - 当执行 **git rm --cached <file>** 命令时，会直接从暂存区删除文件，工作区则不做出改变。
-- 当执行 **git checkout .** 或者 **git checkout -- <file>** 命令时，会用暂存区全部或指定的文件替换工作区的文件。这个操作很危险，会清除工作区中未添加到暂存区中的改动。
-- 当执行 **git checkout HEAD .** 或者 **git checkout HEAD <file>** 命令时，会用 HEAD 指向的 master 分支中的全部或者部分文件替换暂存区和以及工作区中的文件。这个命令也是极具危险性的，因为不但会清除工作区中未提交的改动，也会清除暂存区中未提交的改动。
 
 ![img](./assets/1090617-20181008211557402-232838726.png)
 
@@ -27,17 +25,41 @@
 
 **Remote**： 远程仓库，托管代码的服务器，可以简单的认为是你项目组中的一台电脑用于远程数据交换
 
+本地的仓库维护三个部分，第一个是工作目录Workspace，第二个是暂存区Index/Stage临时保存改动,第三个是HEAD指向最后一次提交的结果（当执行 **git checkout .** 或者 **git checkout -- <file>** 命令时，会用暂存区全部或指定的文件替换工作区的文件。这个操作很危险，会清除工作区中未添加到暂存区中的改动。当执行 **git checkout HEAD .** 或者 **git checkout HEAD <file>** 命令时，会用 HEAD 指向的 master 分支中的全部或者部分文件替换暂存区和以及工作区中的文件。这个命令也是极具危险性的，因为不但会清除工作区中未提交的改动，也会清除暂存区中未提交的改动。）
+
+![img](./assets/1090617-20181008212040668-1339848607.png)
+
+**Untracked:**  未跟踪, 此文件在文件夹中, 但并没有加入到git库, 不参与版本控制. 通过git add 状态变为Staged.
+
+**Unmodify:**  文件已经入库, 未修改, 即版本库中的文件快照内容与文件夹中完全一致. 这种类型的文件有两种去处, 如果它被修改, 而变为Modified.如果使用git rm移出版本库, 则成为Untracked文件
+
+**Modified:** 文件已修改, 仅仅是修改, 并没有进行其他的操作. 这个文件也有两个去处, 通过git add可进入暂存staged状态, 使用git checkout 则丢弃修改过,返回到unmodify状态, 这个git checkout即从库中取出文件, 覆盖当前修改
+
+ **Staged:** 暂存状态. 执行git commit则将修改同步到库中, 这时库中的文件和本地文件又变为一致, 文件为Unmodify状态. 执行git reset HEAD filename取消暂存,文件状态为Modified
+
+![img](./assets/1090617-20181008212245877-52530897.png)
+
+## 使用教程
+
 ### 安装教程
 
 ​	git 官方安装教程 https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
 
-
+​	
 
 ### 创建一个仓库
 
 ```bash
-git init  //使用git
-jj git init //使用jujustu
+git init dir  //使用git
+jj git init dir//使用jujustu
 ```
 
 ![image-20250507215535100](./assets/image-20250507215535100.png)![image-20250507220711900](./assets/image-20250507220711900.png)
+
+
+
+https://www.runoob.com/git
+
+https://www.runoob.com/w3cnote/git-guide.html
+
+https://www.cnblogs.com/qdhxhz/p/9757390.html
