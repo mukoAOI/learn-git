@@ -37,17 +37,38 @@
 
  **Staged:** 暂存状态. 执行git commit则将修改同步到库中, 这时库中的文件和本地文件又变为一致, 文件为Unmodify状态. 执行git reset HEAD filename取消暂存,文件状态为Modified
 
-![img](./assets/1090617-20181008212245877-52530897.png)
-
 ## 使用教程
 
 ### 安装教程
 
 ​	git 官方安装教程 https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
 
-​	
+### git基础操作
 
-### 创建一个仓库
+#### 设置
+
+```bash
+git config 
+	-e 编辑当前仓库配置文件
+	--list 列举git的配置
+	--global 添加这个可以全局设置git，如果去掉，只对当前仓库起作用
+		git config --global user.name "xxxxx"
+		git config --global user.email "xxxxx@xxxxx.xxxxx"
+		
+```
+
+![image-20250507225437669](./assets/image-20250507225437669.png)
+
+#### 克隆仓库
+
+```bash
+git clone <repo> 
+git clone <repo> <dir> //指定对应的路径
+```
+
+![image-20250507225701987](./assets/image-20250507225701987.png)
+
+#### 创建本地仓库
 
 ```bash
 git init dir  //使用git
@@ -56,7 +77,152 @@ jj git init dir//使用jujustu
 
 ![image-20250507215535100](./assets/image-20250507215535100.png)![image-20250507220711900](./assets/image-20250507220711900.png)
 
+#### 文件操作
 
+Git的工作是创建保存对项目的修改增删修改，
+
+![img](./assets/1090617-20181008212245877-52530897-1746629925117-9.png)
+
+#### 创建仓库命令
+
+下表列出了 git 创建仓库的命令：
+
+| 命令        | 说明                                   |
+| :---------- | :------------------------------------- |
+| `git init`  | 初始化仓库                             |
+| `git clone` | 拷贝一份远程仓库，也就是下载一个项目。 |
+
+------
+
+#### 提交与修改
+
+Git 的工作就是创建和保存你的项目的快照及与之后的快照进行对比。
+
+下表列出了有关创建与提交你的项目的快照的命令：
+
+| 命令                                | 说明                                     |
+| :---------------------------------- | :--------------------------------------- |
+| `git add`                           | 添加文件到暂存区                         |
+| `git status`                        | 查看仓库当前的状态，显示有变更的文件。   |
+| `git diff`                          | 比较文件的不同，即暂存区和工作区的差异。 |
+| `git difftool`                      | 使用外部差异工具查看和比较文件的更改。   |
+| `git range-diff`                    | 比较两个提交范围之间的差异。             |
+| `git commit`                        | 提交暂存区到本地仓库。                   |
+| `git reset`                         | 回退版本。                               |
+| `git rm`                            | 将文件从暂存区和工作区中删除。           |
+| `git mv`                            | 移动或重命名工作区文件。                 |
+| `git notes`                         | 添加注释。                               |
+| `git checkout`                      | 分支切换。                               |
+| `git switch （Git 2.23 版本引入）`  | 更清晰地切换分支。                       |
+| `git restore （Git 2.23 版本引入）` | 恢复或撤销文件的更改。                   |
+| `git show`                          | 显示 Git 对象的详细信息。                |
+
+### 提交日志
+
+| 命令               | 说明                                                         |
+| :----------------- | :----------------------------------------------------------- |
+| `git log`          | 查看历史提交记录                                             |
+| `git blame <file>` | 以列表形式查看指定文件的历史修改记录                         |
+| `git shortlog`     | 生成简洁的提交日志摘要                                       |
+| `git describe`     | 生成一个可读的字符串，该字符串基于 Git 的标签系统来描述当前的提交 |
+
+### 远程操作
+
+| 命令            | 说明                        |
+| :-------------- | :-------------------------- |
+| `git remote`    | 远程仓库操作                |
+| `git fetch`     | 从远程获取代码库            |
+| `git pull`      | 下载远程代码并合并          |
+| `git push`      | 上传远程代码并合并          |
+| `git submodule` | 管理包含其他 Git 仓库的项目 |
+
+## 创建管理一个Github 仓库
+
+官方参考
+
+https://docs.github.com/zh/repositories/creating-and-managing-repositories/quickstart-for-repositories
+
+##### 1.使用网页版
+
+1. 在任何页面的右上角，选择 ，然后单击“新建存储库”。
+
+   
+
+   ![GitHub 下拉菜单的屏幕截图，其中显示了用于创建新项的选项。 菜单项“新建存储库”用深橙色框标出。](./assets/repo-create-global-nav-update.png)
+
+   
+
+2. 为存储库键入简短好记的名称。 例如 "hello-world"。
+
+   
+
+   ![创建仓库的第一步的屏幕截图。 “存储库名称”字段包含文本“hello-world”，并用深橙色框出。](./assets/create-repository-name.png)
+
+   
+
+3. 可以选择性地添加存储库的说明。 例如，“我在 GitHub 上的第一个存储库”。
+
+4. 选择仓库可见性。 有关详细信息，请参阅“[关于仓库](https://docs.github.com/zh/repositories/creating-and-managing-repositories/about-repositories#about-repository-visibility)”。
+
+5. 选择“使用 README 初始化此存储库”。
+
+6. 单击“创建存储库”。
+
+恭喜！ 你已经成功创建了第一个存储库，并使用自述文件对其进行了初始化。
+
+##### 2.使用命令行工具
+
+​	pass 自行了解
+
+#### 本地管理github
+
+```bash
+//配置好git
+git config --global user.name ""
+git config --global user.email ""
+
+git clone 指定的库
+
+cd yourrepo
+
+//修改文件
+
+git add 文件
+
+git commit -m "注释/提醒"
+
+git push origin master
+
+```
+
+```
+//或者
+//配置好git
+git config --global user.name ""
+git config --global user.email ""
+
+git init yourrepo
+
+cd yourrepo
+
+git remote add origin your-repo-url
+
+git pull
+
+git checkout 指定分支
+
+//修改文件
+
+git add 文件
+
+git commit -m "注释/提醒"
+
+git push origin master
+```
+
+
+
+## 参考
 
 https://www.runoob.com/git
 
