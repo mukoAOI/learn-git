@@ -144,3 +144,18 @@ cmake --build .
 ![image-20250629205520254](./assets/image-20250629205520254.png)
 
 ![image-20250629205636209](./assets/image-20250629205636209.png)
+
+
+
+
+
+6. #### 使用clang++ 命令行
+
+   ```\
+   clang++ -I ./zlib/include -L ./zlib/lib/ -o test.exe main.cpp -lz
+   cp ./zlib/bin/z.dll .
+   
+   ./test.exe
+   ```
+
+   ![image-20250629211041543](./assets/image-20250629211041543.png)
