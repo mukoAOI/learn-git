@@ -1,0 +1,62 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+#define MaxSize 50
+#define ElemType int 
+
+typedef struct 
+{
+	ElemType data[MaxSize];
+	int length;//存储的数量，也就是表的长度
+}SqList;
+
+void InitList(SqList &L)
+{
+	L.length = 0;
+}
+
+
+/*
+* 所有的1->length 一共length个，对应实际数组里面的0->(length-1)
+* 所以要把第i个，对应数组里面的i-1位和后面的都后移一位
+* 注意范围
+*/
+bool ListInsert(SqList &L,int i ,ElemType e)
+{
+	if(i<1||i>L.length+1)//可以插入到length 位置
+		return false;
+	if(L.length>=MaxSize)
+		return false;
+	for (int j=L.length;j>=i ; j++)
+		L.data[j]=L.data[j-1];
+	L.data[i-1] = e;
+	L.length++;
+	return false;
+}
+
+bool ListDelete(SqList &L,int i ,ElemType &e)
+{
+	if(i<1||i>L.length)
+		return false;
+	
+	e=L.data[i-1];
+	for (int j=i;i<L.length;j++)
+		L.data[j-1]=L.data[j];
+	L.length--;
+	
+	return false;
+}
+
+
+//对应的位置
+int LocateElem(SqList &L,ElemType e)
+{
+	int i;
+	for (i=0;i<L.length;i++)
+		if(L.data[i] == e)
+			return i+1;
+	
+	return 0;
+}
+
+

@@ -1,0 +1,7 @@
+.{
+    .name = .word2vec,
+    .version = "0.0.1",
+    .minimum_zig_version = "0.15.1",
+    .paths = .{""},
+    .fingerprint = 0x527e8d6388244c4c,
+}
