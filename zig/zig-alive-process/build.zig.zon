@@ -1,0 +1,13 @@
+.{
+    .name = .alive_progress,
+    .version = "0.1.0",
+    .fingerprint = 0x2a4ad6a846f2be10,
+    .minimum_zig_version = "0.16.0",
+    .dependencies = .{},
+    .paths = .{
+        "build.zig",
+        "build.zig.zon",
+        "examples",
+        "src",
+    },
+}
