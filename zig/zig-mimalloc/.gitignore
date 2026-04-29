@@ -1,0 +1,8 @@
+# Zig build cache and outputs
+.zig-cache/
+zig-out/
+zig-pkg/
+
+# Common local noise
+.DS_Store
+Thumbs.db
