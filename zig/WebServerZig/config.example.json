@@ -1,0 +1,12 @@
+{
+  "port": 8080,
+  "document_root": "./test_root",
+  "log_directory": "./logs",
+  "log_file_name": "webserver.log",
+  "log_to_stderr": true,
+  "connection_pool": "fixed",
+  "max_connections": 5,
+  "initial_connections": 0,
+  "recv_buffer_size": 65536,
+  "idle_timeout_seconds": 300
+}
