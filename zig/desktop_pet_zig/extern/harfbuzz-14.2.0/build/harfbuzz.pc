@@ -1,0 +1,13 @@
+prefix=C:/Program Files (x86)/harfbuzz
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+Name: harfbuzz
+Description: HarfBuzz text shaping library
+Version: 14.2.0
+
+Libs: -L${libdir} -lharfbuzz
+Libs.private: -lm 
+Requires.private: 
+Cflags: -I${includedir}/harfbuzz

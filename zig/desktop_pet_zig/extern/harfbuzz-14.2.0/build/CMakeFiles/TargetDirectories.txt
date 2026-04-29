@@ -1,0 +1,11 @@
+E:/tets/extern/harfbuzz-14.2.0/build/CMakeFiles/harfbuzz.dir
+E:/tets/extern/harfbuzz-14.2.0/build/CMakeFiles/harfbuzz-subset.dir
+E:/tets/extern/harfbuzz-14.2.0/build/CMakeFiles/harfbuzz-raster.dir
+E:/tets/extern/harfbuzz-14.2.0/build/CMakeFiles/harfbuzz-vector.dir
+E:/tets/extern/harfbuzz-14.2.0/build/CMakeFiles/harfbuzz-gpu.dir
+E:/tets/extern/harfbuzz-14.2.0/build/CMakeFiles/edit_cache.dir
+E:/tets/extern/harfbuzz-14.2.0/build/CMakeFiles/rebuild_cache.dir
+E:/tets/extern/harfbuzz-14.2.0/build/CMakeFiles/list_install_components.dir
+E:/tets/extern/harfbuzz-14.2.0/build/CMakeFiles/install.dir
+E:/tets/extern/harfbuzz-14.2.0/build/CMakeFiles/install/local.dir
+E:/tets/extern/harfbuzz-14.2.0/build/CMakeFiles/install/strip.dir

@@ -1,0 +1,9 @@
+E:/tets/extern/glfw-3.4/../glfw/lib/glfw3dll.lib
+E:/tets/extern/glfw-3.4/../glfw/bin/glfw3.dll
+E:/tets/extern/glfw-3.4/../glfw/include/GLFW/glfw3.h
+E:/tets/extern/glfw-3.4/../glfw/include/GLFW/glfw3native.h
+E:/tets/extern/glfw-3.4/../glfw/lib/cmake/glfw3/glfw3Config.cmake
+E:/tets/extern/glfw-3.4/../glfw/lib/cmake/glfw3/glfw3ConfigVersion.cmake
+E:/tets/extern/glfw-3.4/../glfw/lib/cmake/glfw3/glfw3Targets.cmake
+E:/tets/extern/glfw-3.4/../glfw/lib/cmake/glfw3/glfw3Targets-release.cmake
+E:/tets/extern/glfw-3.4/../glfw/lib/pkgconfig/glfw3.pc

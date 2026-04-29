@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"E:/tets/extern/harfbuzz-14.2.0/build/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

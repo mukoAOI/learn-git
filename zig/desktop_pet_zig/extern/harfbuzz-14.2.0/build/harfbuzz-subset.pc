@@ -1,0 +1,12 @@
+prefix=C:/Program Files (x86)/harfbuzz
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+Name: harfbuzz subsetter
+Description: HarfBuzz font subsetter
+Version: 14.2.0
+
+Requires: harfbuzz = 14.2.0
+Libs: -L${libdir} -lharfbuzz-subset
+Cflags: -I${includedir}/harfbuzz

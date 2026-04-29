@@ -1,0 +1,9 @@
+E:/tets/extern/freetype-2.14.3/build/CMakeFiles/freetype.dir
+E:/tets/extern/freetype-2.14.3/build/CMakeFiles/package.dir
+E:/tets/extern/freetype-2.14.3/build/CMakeFiles/package_source.dir
+E:/tets/extern/freetype-2.14.3/build/CMakeFiles/edit_cache.dir
+E:/tets/extern/freetype-2.14.3/build/CMakeFiles/rebuild_cache.dir
+E:/tets/extern/freetype-2.14.3/build/CMakeFiles/list_install_components.dir
+E:/tets/extern/freetype-2.14.3/build/CMakeFiles/install.dir
+E:/tets/extern/freetype-2.14.3/build/CMakeFiles/install/local.dir
+E:/tets/extern/freetype-2.14.3/build/CMakeFiles/install/strip.dir

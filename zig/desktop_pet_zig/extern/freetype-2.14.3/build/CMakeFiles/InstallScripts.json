@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"E:/tets/extern/freetype-2.14.3/build/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

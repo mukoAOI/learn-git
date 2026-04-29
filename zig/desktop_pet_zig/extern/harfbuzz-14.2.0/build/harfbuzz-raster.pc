@@ -1,0 +1,14 @@
+prefix=C:/Program Files (x86)/harfbuzz
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+Name: harfbuzz raster
+Description: HarfBuzz CPU rasterizer
+Version: 14.2.0
+
+Requires: harfbuzz = 14.2.0
+Requires.private: 
+Libs: -L${libdir} -lharfbuzz-raster
+Libs.private: -lm 
+Cflags: -I${includedir}/harfbuzz
